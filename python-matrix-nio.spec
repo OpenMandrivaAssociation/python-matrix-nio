@@ -1,38 +1,48 @@
 Name:           python-matrix-nio
-Version:        0.6
-Release:        0
+Version:        0.14.1
+Release:        1
 License:        ISC
 Summary:        A Python Matrix client library, designed according to sans I/O principles
 Url:            https://github.com/poljar/matrix-nio
 Group:          Development/Languages/Python
 Source:         https://files.pythonhosted.org/packages/source/m/matrix-nio/matrix-nio-%{version}.tar.gz
-BuildRequires:  python-rpm-macros
-BuildRequires:  %{python_module setuptools}
+
+#BuildRequires:  python-rpm-macros
+BuildRequires:  python3dist(setuptools)
+
 # SECTION test requirements
-BuildRequires:  %{python_module attrs}
-BuildRequires:  %{python_module future}
-BuildRequires:  %{python_module h11}
-BuildRequires:  %{python_module h2}
-BuildRequires:  %{python_module jsonschema}
-BuildRequires:  %{python_module logbook}
-BuildRequires:  %{python_module pycryptodome}
-BuildRequires:  %{python_module unpaddedbase64}
+BuildRequires:  python3dist(attrs)
+BuildRequires:  python3dist(future)
+BuildRequires:  python3dist(jsonschema)
+BuildRequires:  python3dist(logbook)
+BuildRequires:  python3dist(pycryptodome)
+
+# Not imported to Cooker yet
+#BuildRequires:  python3dist(h11)
+#BuildRequires:  python3dist(h2)
+#BuildRequires:  python3dist(unpaddedbase64)
+
 # /SECTION
 BuildRequires:  fdupes
-Requires:       python-attrs
-Requires:       python-future
-Requires:       python-h11
-Requires:       python-h2
-Requires:       python-jsonschema
-Requires:       python-logbook
-Requires:       python-pycryptodome
-Requires:       python-unpaddedbase64
-Suggests:       python-typing
-Suggests:       python-aiohttp
-Suggests:       python-python-olm >= 3.1.0
-Suggests:       python-peewee >= 3.9.5
-Suggests:       python-cachetools
-Suggests:       python-atomicwrites
+Requires:       python3dist(attrs)
+Requires:       python3dist(future)
+Requires:       python3dist(jsonschema)
+Requires:       python3dist(logbook)
+Requires:       python3dist(pycryptodome)
+
+# Not imported to Cooker yet
+#Requires:       python-h11
+#Requires:       python-h2
+#Requires:       python-unpaddedbase64
+
+Recommends:       python3dist(typing)
+Recommends:       python3dist(aiohttp)
+Recommends:       python3dist(peewee)
+Recommends:       python3dist(atomicwrites)
+
+# Not imported to Cooker yet
+#Recommends:       python3dist(cachetools)
+#Recommends:       python3dist(python-olm)
 BuildArch:      noarch
 
 %python_subpackages
