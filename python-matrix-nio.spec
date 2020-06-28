@@ -17,23 +17,18 @@ BuildRequires:  python3dist(jsonschema)
 BuildRequires:  python3dist(logbook)
 BuildRequires:  python3dist(pycryptodome)
 BuildRequires:  python3dist(h11)
-
-# Not imported to Cooker yet
-#BuildRequires:  python3dist(h2)
-#BuildRequires:  python3dist(unpaddedbase64)
-
-# /SECTION
+BuildRequires:  python3dist(h2)
+BuildRequires:  python3dist(unpaddedbase64)
 BuildRequires:  fdupes
+
 Requires:       python3dist(attrs)
 Requires:       python3dist(future)
 Requires:       python3dist(jsonschema)
 Requires:       python3dist(logbook)
 Requires:       python3dist(pycryptodome)
 Requires:       python3dist(h11)
-
-# Not imported to Cooker yet
-#Requires:       python-h2
-#Requires:       python-unpaddedbase64
+Requires:       python-h2
+Requires:       python-unpaddedbase64
 
 Recommends:       python3dist(typing)
 Recommends:       python3dist(aiohttp)
