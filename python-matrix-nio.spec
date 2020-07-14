@@ -14,7 +14,7 @@ BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(attrs)
 BuildRequires:  python3dist(future)
 BuildRequires:  python3dist(jsonschema)
-BuildRequires:  python3dist(logbook)
+BuildRequires:  python-logbook
 BuildRequires:  python3dist(pycryptodome)
 BuildRequires:  python3dist(h11)
 BuildRequires:  python3dist(h2)
