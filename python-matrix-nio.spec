@@ -45,10 +45,10 @@ A Python Matrix client library, designed according to sans I/O principles.
 %setup -q -n matrix-nio-%{version}
 
 %build
-%python_build
+%__python setup.py build
 
 %install
-%python_install
+%__python setup.py install --root=%{buildroot}
 %python_expand %fdupes %{buildroot}%{$python_sitelib}
 %check
 %python_exec setup.py test
