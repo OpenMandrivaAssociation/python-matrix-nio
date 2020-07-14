@@ -35,9 +35,7 @@ Recommends:       python3dist(typing)
 Recommends:       python3dist(aiohttp)
 Recommends:       python3dist(peewee)
 Recommends:       python3dist(atomicwrites)
-
-# Not imported to Cooker yet
-#Recommends:       python3dist(cachetools)
+Recommends:       python3dist(cachetools)
 BuildArch:      noarch
 
 %python_subpackages
