@@ -29,6 +29,7 @@ Requires:       python3dist(pycryptodome)
 Requires:       python3dist(h11)
 Requires:       python-h2
 Requires:       python-unpaddedbase64
+Requires:       python3dist(python-olm)
 
 Recommends:       python3dist(typing)
 Recommends:       python3dist(aiohttp)
@@ -37,7 +38,6 @@ Recommends:       python3dist(atomicwrites)
 
 # Not imported to Cooker yet
 #Recommends:       python3dist(cachetools)
-#Recommends:       python3dist(python-olm)
 BuildArch:      noarch
 
 %python_subpackages
