@@ -38,8 +38,6 @@ Recommends:       python3dist(atomicwrites)
 Recommends:       python3dist(cachetools)
 BuildArch:      noarch
 
-%python_subpackages
-
 %description
 A Python Matrix client library, designed according to sans I/O principles.
 
