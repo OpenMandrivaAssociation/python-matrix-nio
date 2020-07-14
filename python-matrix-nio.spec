@@ -53,7 +53,7 @@ A Python Matrix client library, designed according to sans I/O principles.
 %check
 %python_exec setup.py test
 
-%files %{python_files}
+%files
 %doc README.md
 %license LICENSE.md
 %{python_sitelib}/*
