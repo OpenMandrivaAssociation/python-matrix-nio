@@ -29,6 +29,8 @@ Requires:       python3dist(pycryptodome)
 Requires:       python3dist(h11)
 Requires:       python-h2
 Requires:       python-unpaddedbase64
+Requires:       python3dist(aiofiles)
+Requires:       python3dist(logbook)
 Requires:       python3dist(python-olm)
 
 Recommends:       python3dist(typing)
