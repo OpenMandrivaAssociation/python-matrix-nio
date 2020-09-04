@@ -1,11 +1,12 @@
 Name:           python-matrix-nio
-Version:        0.14.1
+Version:        0.15.1
 Release:        1
 License:        ISC
 Summary:        A Python Matrix client library, designed according to sans I/O principles
 Url:            https://github.com/poljar/matrix-nio
 Group:          Development/Languages/Python
 Source:         https://files.pythonhosted.org/packages/source/m/matrix-nio/matrix-nio-%{version}.tar.gz
+Patch0:         python-matrix-nio-omv-patch-fix-for-require-aiofiles.patch
 
 #BuildRequires:  python-rpm-macros
 BuildRequires:  python3dist(setuptools)
@@ -45,6 +46,7 @@ A Python Matrix client library, designed according to sans I/O principles.
 
 %prep
 %setup -q -n matrix-nio-%{version}
+%autopatch -p1
 
 %build
 %__python setup.py build
