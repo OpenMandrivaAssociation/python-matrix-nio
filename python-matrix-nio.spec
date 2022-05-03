@@ -2,7 +2,7 @@
 
 Name:		python-%{module}
 Version:	0.19.0
-Release:	1
+Release:	2
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
 Url:		https://github.com/poljar/matrix-nio
