@@ -2,7 +2,7 @@
 
 Name:		python-%{module}
 Version:	0.19.0
-Release:	1
+Release:	3
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
 Group:		Development/Python
