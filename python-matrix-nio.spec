@@ -29,14 +29,12 @@ BuildRequires:	python3dist(atomicwrites)
 BuildRequires:	python3dist(cachetools)
 BuildRequires:	python3dist(peewee)
 BuildRequires:	python3dist(python-olm)
-BuildRequires:	python3dist(typing)
 
 # e2e
 Requires:	python3dist(atomicwrites)
 Requires:	python3dist(cachetools)
 Requires:	python3dist(peewee)
 Requires:	python3dist(python-olm)
-Requires:	python3dist(typing)
 
 BuildArch:	noarch
 
