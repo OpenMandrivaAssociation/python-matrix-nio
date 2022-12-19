@@ -1,40 +1,40 @@
-%define	module	matrix-nio
-
-Name:		python-%{module}
-Version:	0.19.0
-Release:	3
+Name:		python-matrix-nio
+Version:	0.20.1
+Release:	1
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
 Group:		Development/Python
 Url:		https://github.com/poljar/matrix-nio
-Source:		https://files.pythonhosted.org/packages/source/m/%{module}/%{module}-%{version}.tar.gz
-Patch0:		python-matrix-nio-0.19.0-omv-patch-fix-for-require-aiofiles.patch
+Source0:	https://pypi.io/packages/source/m/matrix-nio/matrix_nio-%{version}.tar.gz
+Patch0:		python-matrix-nio-0.20.1-omv-patch-fix-for-require-aiofiles.patch
 
-BuildRequires:	pkgconfig(python3)
-BuildRequires:	python3dist(setuptools)
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pip)
+BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(wheel)
 # SECTION test requirements
-BuildRequires:	python3dist(aiofiles)
-BuildRequires:	python3dist(aiohttp)
-BuildRequires:	python3dist(aiohttp-socks)
-BuildRequires:	python3dist(future)
-BuildRequires:	python-h2
-BuildRequires:	python3dist(h11)
-BuildRequires:	python3dist(jsonschema)
-BuildRequires:	python3dist(logbook)
-BuildRequires:	python3dist(pycryptodome)
-BuildRequires:	python3dist(unpaddedbase64)
+BuildRequires:	python%{pyver}dist(aiofiles)
+BuildRequires:	python%{pyver}dist(aiohttp)
+BuildRequires:	python%{pyver}dist(aiohttp-socks)
+BuildRequires:	python%{pyver}dist(future)
+BuildRequires:	python%{pyver}dist(h2)
+BuildRequires:	python%{pyver}dist(h11)
+BuildRequires:	python%{pyver}dist(jsonschema)
+BuildRequires:	python%{pyver}dist(logbook)
+BuildRequires:	python%{pyver}dist(pycryptodome)
+BuildRequires:	python%{pyver}dist(unpaddedbase64)
 BuildRequires:	fdupes
 # e2e
-BuildRequires:	python3dist(atomicwrites)
-BuildRequires:	python3dist(cachetools)
-BuildRequires:	python3dist(peewee)
-BuildRequires:	python3dist(python-olm)
+BuildRequires:	python%{pyver}dist(atomicwrites)
+BuildRequires:	python%{pyver}dist(cachetools)
+BuildRequires:	python%{pyver}dist(peewee)
+BuildRequires:	python%{pyver}dist(python-olm)
 
 # e2e
-Requires:	python3dist(atomicwrites)
-Requires:	python3dist(cachetools)
-Requires:	python3dist(peewee)
-Requires:	python3dist(python-olm)
+Requires:	python%{pyver}dist(atomicwrites)
+Requires:	python%{pyver}dist(cachetools)
+Requires:	python%{pyver}dist(peewee)
+Requires:	python%{pyver}dist(python-olm)
 
 BuildArch:	noarch
 
@@ -42,7 +42,7 @@ BuildArch:	noarch
 %license LICENSE.md
 %doc README.md
 %{python_sitelib}/nio/
-%{python_sitelib}/matrix_nio-%{version}-py%{pyver}.egg-info/
+%{python_sitelib}/matrix_nio-%{version}*-info/
 
 #----------------------------------------------------------------------------
 
@@ -50,7 +50,7 @@ BuildArch:	noarch
 A Python Matrix client library, designed according to sans I/O principles.
 
 %prep
-%autosetup -p1 -n %{module}-%{version}
+%autosetup -p1 -n matrix_nio-%{version}
 
 %build
 %py_build
