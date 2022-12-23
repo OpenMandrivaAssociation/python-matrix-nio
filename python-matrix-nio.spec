@@ -10,7 +10,7 @@ Patch0:		python-matrix-nio-0.20.1-omv-patch-fix-for-require-aiofiles.patch
 
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python3dist(pip)
-#BuildRequires:	python3dist(poetry)
+BuildRequires:	python3dist(poetry)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	python3dist(wheel)
 # SECTION test requirements
