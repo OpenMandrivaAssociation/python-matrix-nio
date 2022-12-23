@@ -9,33 +9,33 @@ Source0:	https://pypi.io/packages/source/m/matrix-nio/matrix_nio-%{version}.tar.
 Patch0:		python-matrix-nio-0.20.1-omv-patch-fix-for-require-aiofiles.patch
 
 BuildRequires:	pkgconfig(python)
-BuildRequires:	python%{pyver}dist(pip)
-#BuildRequires:	python%{pyver}dist(poetry)
-BuildRequires:	python%{pyver}dist(setuptools)
-BuildRequires:	python%{pyver}dist(wheel)
+BuildRequires:	python3dist(pip)
+#BuildRequires:	python3dist(poetry)
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(wheel)
 # SECTION test requirements
-BuildRequires:	python%{pyver}dist(aiofiles)
-BuildRequires:	python%{pyver}dist(aiohttp)
-BuildRequires:	python%{pyver}dist(aiohttp-socks)
-BuildRequires:	python%{pyver}dist(future)
-BuildRequires:	python%{pyver}dist(h2)
-BuildRequires:	python%{pyver}dist(h11)
-BuildRequires:	python%{pyver}dist(jsonschema)
-BuildRequires:	python%{pyver}dist(logbook)
-BuildRequires:	python%{pyver}dist(pycryptodome)
-BuildRequires:	python%{pyver}dist(unpaddedbase64)
+BuildRequires:	python3dist(aiofiles)
+BuildRequires:	python3dist(aiohttp)
+BuildRequires:	python3dist(aiohttp-socks)
+BuildRequires:	python3dist(future)
+BuildRequires:	python3dist(h2)
+BuildRequires:	python3dist(h11)
+BuildRequires:	python3dist(jsonschema)
+BuildRequires:	python3dist(logbook)
+BuildRequires:	python3dist(pycryptodome)
+BuildRequires:	python3dist(unpaddedbase64)
 BuildRequires:	fdupes
 # e2e
-BuildRequires:	python%{pyver}dist(atomicwrites)
-BuildRequires:	python%{pyver}dist(cachetools)
-BuildRequires:	python%{pyver}dist(peewee)
-BuildRequires:	python%{pyver}dist(python-olm)
+BuildRequires:	python3dist(atomicwrites)
+BuildRequires:	python3dist(cachetools)
+BuildRequires:	python3dist(peewee)
+BuildRequires:	python3dist(python-olm)
 
 # e2e
-Requires:	python%{pyver}dist(atomicwrites)
-Requires:	python%{pyver}dist(cachetools)
-Requires:	python%{pyver}dist(peewee)
-Requires:	python%{pyver}dist(python-olm)
+Requires:	python3dist(atomicwrites)
+Requires:	python3dist(cachetools)
+Requires:	python3dist(peewee)
+Requires:	python3dist(python-olm)
 
 BuildArch:	noarch
 
