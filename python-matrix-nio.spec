@@ -1,5 +1,5 @@
 Name:		python-matrix-nio
-Version:	0.20.1
+Version:	0.20.2
 Release:	1
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
@@ -10,7 +10,6 @@ Patch0:		python-matrix-nio-0.20.1-fix_deps_version.patch
 
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
-BuildRequires:	python%{pyver}dist(poetry-core)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(pytoml)
 BuildRequires:	python%{pyver}dist(wheel)
