@@ -6,7 +6,7 @@ Summary:	A Python Matrix client library, designed according to sans I/O principl
 Group:		Development/Python
 Url:		https://github.com/poljar/matrix-nio
 Source0:	https://pypi.io/packages/source/m/matrix-nio/matrix_nio-%{version}.tar.gz
-Patch0:		python-matrix-nio-0.20.1-fix_deps_version.patch
+#Patch0:		python-matrix-nio-0.20.1-fix_deps_version.patch
 
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
