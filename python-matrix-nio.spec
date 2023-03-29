@@ -11,6 +11,7 @@ Source0:	https://pypi.io/packages/source/m/matrix-nio/matrix_nio-%{version}.tar.
 BuildRequires:	pkgconfig(python)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
+BuildRequires:	python%{pyver}dist(poetry-core)
 BuildRequires:	python%{pyver}dist(pytoml)
 BuildRequires:	python%{pyver}dist(wheel)
 # SECTION test requirements
