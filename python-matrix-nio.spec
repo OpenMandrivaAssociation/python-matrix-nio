@@ -1,6 +1,6 @@
 Name:		python-matrix-nio
 Version:	0.20.2
-Release:	1
+Release:	2
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
 Group:		Development/Python
