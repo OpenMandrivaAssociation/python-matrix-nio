@@ -2,7 +2,7 @@
 
 Name:		python-matrix-nio
 Version:	0.25.2
-Release:	2
+Release:	3
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
 Group:		Development/Python
@@ -47,6 +47,17 @@ A Python Matrix client library, designed according to sans I/O principles.
 %prep -a
 # Remove bundled egg-info
 rm -rf src/%{oname}.egg-info
+
+# Remove version pinning
+sed \
+    -e 's/"aiohttp-socks.*"/"aiohttp-socks"/' \
+    -e 's/"aiofiles.*"/"aiofiles"/' \
+    -e 's/"cachetools.*"/"cachetools"/' \
+    -e 's/"h11.*"/"h11"/' \
+    -e 's/"h2.*"/"h2"/' \
+    -e 's/"pycryptodome.*"/"pycryptodomex"/' \
+    -e 's/"jsonschema.*"/"jsonschema"/' \
+    -i pyproject.toml
 
 %files
 %license LICENSE.md
