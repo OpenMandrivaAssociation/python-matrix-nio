@@ -1,14 +1,18 @@
+%define oname matrix_nio
+
 Name:		python-matrix-nio
 Version:	0.25.2
-Release:	3
+Release:	2
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
 Group:		Development/Python
-Url:		https://github.com/poljar/matrix-nio
-Source0:	https://pypi.io/packages/source/m/matrix-nio/matrix_nio-%{version}.tar.gz
+URL:		https://github.com/poljar/matrix-nio
+Source0:	https://pypi.io/packages/source/m/matrix-nio/%{oname}-%{version}.tar.gz
 #Patch0:		python-matrix-nio-0.20.1-fix_deps_version.patch
+BuildSystem:	python
+BuildArch:	noarch
 
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(poetry-core)
@@ -31,32 +35,21 @@ BuildRequires:	python%{pyver}dist(atomicwrites)
 BuildRequires:	python%{pyver}dist(cachetools)
 BuildRequires:	python%{pyver}dist(peewee)
 BuildRequires:	python%{pyver}dist(python-olm)
-
 # e2e
 Requires:	python%{pyver}dist(atomicwrites)
 Requires:	python%{pyver}dist(cachetools)
 Requires:	python%{pyver}dist(peewee)
 Requires:	python%{pyver}dist(python-olm)
 
-BuildArch:	noarch
+%description
+A Python Matrix client library, designed according to sans I/O principles.
+
+%prep -a
+# Remove bundled egg-info
+rm -rf src/%{oname}.egg-info
 
 %files
 %license LICENSE.md
 %doc README.md
 %{python_sitelib}/nio/
-%{python_sitelib}/matrix_nio-%{version}*-info/
-
-#----------------------------------------------------------------------------
-
-%description
-A Python Matrix client library, designed according to sans I/O principles.
-
-%prep
-%autosetup -p1 -n matrix_nio-%{version}
-
-%build
-%py_build
-
-%install
-%py_install
-
+%{python_sitelib}/%{oname}-%{version}.dist-info/
