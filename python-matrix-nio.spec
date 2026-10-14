@@ -2,7 +2,7 @@
 
 Name:		python-matrix-nio
 Version:	0.26.0
-Release:	1
+Release:	2
 License:	ISC
 Summary:	A Python Matrix client library, designed according to sans I/O principles
 Group:		Development/Python
@@ -26,7 +26,6 @@ BuildRequires:	python%{pyver}dist(future)
 BuildRequires:	python%{pyver}dist(h2)
 BuildRequires:	python%{pyver}dist(h11)
 BuildRequires:	python%{pyver}dist(jsonschema)
-BuildRequires:	python%{pyver}dist(logbook)
 BuildRequires:	python%{pyver}dist(pycryptodome)
 BuildRequires:	python%{pyver}dist(unpaddedbase64)
 BuildRequires:	fdupes
